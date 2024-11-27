@@ -1,0 +1,97 @@
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
+@import url("styles/topicos.css");
+@import url("styles/contato.css");
+@import url("styles/rodapé.css");
+
+:root {
+    --cor-de-fundo: #F1F3F6; /* Nova cor de fundo mais neutra */
+    --branco: #FFFFFF;
+    --laranja: #FF9F00; /* Nova cor de destaque */
+    --azul-degrade: linear-gradient(97.54deg, #0A3D5A 35.49%, #1E5F7E 165.37%); /* Alteração do degradê */
+    --fonte-principal: "Arial", sans-serif; /* Fonte sem direitos autorais */
+    --azul: #0A3D5A; /* Alteração do tom de azul */
+    --fonte-secundario: "Verdana", sans-serif; /* Fonte sem direitos autorais */
+    --preto: #333333; /* Cor de texto mais suave */
+    --cinza: #646464; /* Cor de texto secundário */
+    --cinza-claro: #A1A1A1; /* Cor mais clara para elementos não importantes */
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Alterações para garantir que as imagens não contenham marcas */
+.container__imagem,
+.descrição__imagem,
+.card__imagem,
+.banner__imagem,
+.cabeçalho__imagem,
+.carrossel__imagem {
+    /* Substituindo as imagens com novos arquivos sem marcas */
+    background-image: url('img/ImagemGenerica1.svg');
+    background-size: cover;
+}
+
+/* Exemplo de cor alterada para links e botões */
+a {
+    color: var(--laranja);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--azul);
+}
+
+/* Alterações para os botões */
+.botões__item {
+    background-color: var(--azul);
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.botões__item:hover {
+    background-color: var(--laranja);
+}
+
+/* Modificando o cabeçalho para não usar fontes e imagens registradas */
+.cabeçalho {
+    background-color: var(--branco);
+    color: var(--preto);
+    font-family: var(--fonte-secundario);
+    padding: 20px;
+}
+
+/* Alteração nas cores de fundo de seções */
+.banner {
+    background-color: var(--azul-degrade);
+    color: var(--branco);
+    padding: 40px;
+    text-align: center;
+}
+
+/* Modificação de estilos de carrossel e swiper */
+.carrossel__container {
+    padding: 20px;
+    background-color: var(--branco);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: var(--laranja);
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--azul);
+}
+
+/* Alteração de imagens do carrossel para novas sem marcas registradas */
+.swiper-slide img {
+    background-image: url('img/ImagemGenerica2.svg');
+    background-size: cover;
+}
